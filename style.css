@@ -1,0 +1,310 @@
+@font-face {
+  font-family: SVOBODA;
+  src: url(./fonts/SVOBODA.ttf);
+}
+
+
+
+body{
+    background-image: url(./images/99px_ru_wallpaper_354622_novogodnij_interer_s_elkoj_i_kaminom.jpg);
+    margin: 0 auto;
+}
+
+
+.timer {
+  display: grid;
+  grid-template-columns: 10rem 0.5rem 10rem 0.5rem 10rem 0.5rem 10rem;
+  font-size: 8rem;
+  justify-items: center;
+  justify-self: center;
+  font-family: ALGERIAN;
+   
+}
+
+@keyframes timer_gradient {
+  10% {background: linear-gradient(#cd5c5cb0, #8b4513ab); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  20% {background: linear-gradient(#8b4513bd, #A52A2A); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  30% {background: linear-gradient(#a52a2ab6, #800000b9); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  40% {background: linear-gradient(#800000, #FF4500); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  50% {background: linear-gradient(#ff4400c9, #dc143cc4); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  60% {background: linear-gradient(#dc143cc4, #ff0000c0); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  70% {background: linear-gradient(#FF0000, #B22222); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  80% {background: linear-gradient(#b22222c9, #8b0000c4); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  90% {background: linear-gradient(#8b0000c0, #800000b0); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+  100% {background: linear-gradient(#800000c4, #cd5c5cbb); color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;}
+}
+
+
+
+
+
+
+
+
+.timer__item {
+	animation: timer_gradient 10s linear infinite alternate;
+}
+.separator{
+  animation: timer_gradient 10s linear infinite alternate;
+}
+
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  color: white;
+  animation: timer_gradient 10s linear infinite alternate;
+  
+  
+}
+
+
+
+
+
+
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 50px;
+  background-color: #18191c;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.snow-toggle {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
+  border: 0;
+}
+
+.snow-toggle__label {
+  padding-bottom: 10px;
+}
+
+.snow-toggle__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.snow-toggle__text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 12px);
+  width: 25px;
+  height: 25px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.snow-toggle__control {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  margin-right: 15px;
+}
+
+.snow-toggle__control:focus + .snow-toggle__text::before {
+  border-color: #C56FFF;
+}
+
+.snow-toggle__control:checked + .snow-toggle__text::before {
+  background-color: #FFFFFF;
+  background: radial-gradient(
+    circle,
+    #FFFFFF 0%,
+    #FFFFFF 40%,
+    transparent 50%,
+    transparent 100%
+  );
+}
+
+.snow {
+  --animation-name: snowfall;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.snow__flake {
+  position: relative;
+  top: -1.5em;
+  color: #c1dcec;
+  animation-name: var(--animation-name);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(calc(100vh + 1.5em));
+  }
+}
+
+
+
+.gift1{
+  position: absolute;
+  top: 790px;
+  left: 190px;
+  filter: brightness(0.8);
+}
+
+.gift-img1{
+  opacity: 0;
+  position: relative;
+  top: 610px;
+  left: 250px;
+  
+}
+
+.gift1:hover~.gift-img1 {
+  opacity: 1;
+  
+}
+
+.gift2{
+  position: absolute;
+  top: 715px;
+  left: 853px;
+  filter: brightness(0.4);
+
+}
+
+.gift-img2{
+  opacity: 0;
+  position: relative;
+  left: 900px;
+  top: 470px;
+}
+
+.gift2:hover~.gift-img2 {
+  opacity: 1;
+  
+}
+
+.gift3{
+  position: absolute;
+  left: 500px;
+  top: 229px;
+  filter: brightness(0.6);
+}
+
+.gift-img3{
+  opacity: 0;
+  position: relative;
+  left: 330px;
+  bottom: 100px;
+}
+
+.gift3:hover~.gift-img3 {
+  opacity: 1;
+  
+}
+
+.gift4{
+  position: absolute;
+  left: 1550px;
+  top: 835px;
+  filter: brightness(0.7);
+}
+
+.gift-img4{
+  opacity: 0;
+  position: relative;
+  left: 1600px;
+  top: 420px;
+}
+
+.gift4:hover~.gift-img4 {
+  opacity: 1;
+  
+}
+
+
+
+
+
+
+.gif1{
+  position: absolute;
+  left: 1750px;
+  top: 800px;
+}
+
+.gift-text{
+  width: 200px;
+  height: 100px;
+  font-family: 'SVOBODA';
+  opacity: 0;
+  font-size: 30px;
+  position: absolute;
+  left: 1700px;
+  top: 650px;
+
+}
+.gif1:hover~.gift-text {
+  opacity: 1;
+}
+
+.your_gift{
+  font-family: 'SVOBODA';
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  top: 360px;
+  
+}
